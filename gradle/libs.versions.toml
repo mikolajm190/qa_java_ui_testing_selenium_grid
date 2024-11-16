@@ -1,0 +1,19 @@
+[versions]
+testng = "7.4.0"
+selenium = "4.11.0"
+
+[libraries]
+testng = { module = "org.testng:testng", version.ref = "testng" }
+selenium_remote_webdriver = { module = "org.seleniumhq.selenium:selenium-remote-driver", version.ref = "selenium" }
+selenium_chrome_driver = { module = "org.seleniumhq.selenium:selenium-chrome-driver", version.ref = "selenium" }
+selenium_firefox_driver = { module = "org.seleniumhq.selenium:selenium-firefox-driver", version.ref = "selenium" }
+selenium_edge_driver = { module = "org.seleniumhq.selenium:selenium-edge-driver", version.ref = "selenium"}
+selenium_support = { module = "org.seleniumhq.selenium:selenium-support", version.ref = "selenium"}
+
+[bundles]
+selenium = [
+    "selenium_remote_webdriver",
+    "selenium_support",
+    "selenium_chrome_driver",
+    "selenium_firefox_driver",
+    "selenium_edge_driver" ]
